@@ -1,19 +1,11 @@
-import { useState,useEffect } from 'react'
-import Warmup from '../useEffect/Warmup'
-import One from '../useEffect/One'
-import Two from '../useEffect/Two'
- 
+import UseEffectHook from "../04-useEffect/UseEffectHook";
 
 function App() {
- 
   return (
-<div>
-{/* <Warmup/> */}
-{/* <One/> */}
-<Two/>
-
-</div>
-  )
+    <div>
+      <UseEffectHook />
+    </div>
+  );
 }
 
-export default App
+export default App;
