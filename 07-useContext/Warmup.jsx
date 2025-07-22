@@ -27,6 +27,7 @@
 import React from "react";
 
 const Warmup = () => {
+  console.log("<div>Wamup</div>;", <div>Wamup</div>);
   return <div>Wamup</div>;
 };
 
