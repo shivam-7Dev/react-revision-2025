@@ -24,11 +24,21 @@
        see your String displayed in an <h1> in the DOM.
 */
 
-import React from "react";
+import React, { createContext, useState } from "react";
+import Child from "./Child";
+
+const WarmupContext = createContext();
 
 const Warmup = () => {
-  console.log("<div>Wamup</div>;", <div>Wamup</div>);
-  return <div>Wamup</div>;
+  const [state, setState] = useState("I love monkeys!");
+  return (
+    <WarmupContext.Provider value={[state, setState]}>
+      <div>Wamup</div>;
+      <Child />
+    </WarmupContext.Provider>
+  );
 };
 
 export default Warmup;
+
+export { WarmupContext };

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import Warmup from "./Warmup";
+import Warmup from "./Warmup/Warmup";
 import Parent from "./tree/Parent";
 import { AuthContext } from "../src/context/AuthContextProvider";
 
@@ -17,8 +17,8 @@ const UseContext = () => {
     <div>
       Use Context
       <div style={{ border: " 4px solid black", padding: "10px" }}>
-        <Parent />
-        {/* <Warmup /> */}
+        {/* <Parent /> */}
+        <Warmup />
       </div>
       <hr />
       <hr />
