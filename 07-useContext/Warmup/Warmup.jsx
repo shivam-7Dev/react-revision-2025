@@ -33,7 +33,7 @@ const Warmup = () => {
   const [state, setState] = useState("I love monkeys!");
   return (
     <WarmupContext.Provider value={[state, setState]}>
-      <div>Wamup</div>;
+      <div>Wamup</div>
       <Child />
     </WarmupContext.Provider>
   );

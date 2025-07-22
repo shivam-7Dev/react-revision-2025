@@ -28,3 +28,22 @@
        see your String displayed in an <h1> in the DOM and it
        should change when you click the button beside it.
 */
+import React, { createContext, useState } from "react";
+import Child from "./Child";
+const OneContext = createContext();
+
+const One = () => {
+  const [state, setState] = useState("");
+  return (
+    <OneContext.Provider value={[state, setState]}>
+      <div>
+        <h2>One Parent</h2>
+        <Child />
+      </div>
+    </OneContext.Provider>
+  );
+};
+
+export default One;
+
+export { OneContext };

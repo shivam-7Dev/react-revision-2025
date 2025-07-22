@@ -31,3 +31,37 @@
        see your counter displayed in an <h1> in the DOM and it
        should change when you click the button beside it.
 */
+
+import React, { createContext, useReducer } from "react";
+import Child from "./Child";
+const ThreeContext = createContext();
+
+const reducer = (currentState, action) => {
+  switch (action.type) {
+    case "INCREASE": {
+      return currentState + 1;
+    }
+
+    case "DECREASE": {
+      return currentState - 1;
+    }
+    default:
+      return currentState;
+  }
+};
+
+const Three = () => {
+  const [state, dispatch] = useReducer(reducer, 0);
+  return (
+    <ThreeContext.Provider value={[state, dispatch]}>
+      <div>
+        <h3>Three</h3>
+        <Child />
+      </div>
+    </ThreeContext.Provider>
+  );
+};
+
+export default Three;
+
+export { ThreeContext };

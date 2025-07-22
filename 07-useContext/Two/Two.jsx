@@ -27,3 +27,28 @@
        see your String and Number displayed in the <p> tags
        in the DOM.
 */
+
+import React, { createContext, useState } from "react";
+import Child from "./Child";
+
+const TwoContext1 = createContext();
+const TwoContext2 = createContext();
+
+const Two = () => {
+  const [state1, setState1] = useState("This is string state");
+  const [state2, setState2] = useState(55);
+  return (
+    <TwoContext1.Provider value={[state1, setState1]}>
+      <TwoContext2.Provider value={[state2, setState2]}>
+        <div>
+          <h3>Two parent</h3>
+          <Child />
+        </div>
+      </TwoContext2.Provider>
+    </TwoContext1.Provider>
+  );
+};
+
+export default Two;
+
+export { TwoContext1, TwoContext2 };
