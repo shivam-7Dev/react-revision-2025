@@ -23,3 +23,11 @@
     7. Open your Browser to test that this works. You should
        see your String displayed in an <h1> in the DOM.
 */
+
+import React from "react";
+
+const Warmup = () => {
+  return <div>Wamup</div>;
+};
+
+export default Warmup;
